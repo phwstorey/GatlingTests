@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("job")
 public class JobController {
-
-    @PostMapping("create")
+    @PostMapping(value = "create",consumes = "application/json")
     public ResponseEntity<String> roundUpAndAddToSavings() {
-        return new ResponseEntity<String>("Job Created", HttpStatus.OK);
+        System.out.println(Thread.currentThread().getId());
+        return new ResponseEntity<String>("{\"jobName\": \"doSomething\"}", HttpStatus.CREATED);
     }
 }
