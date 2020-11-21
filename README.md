@@ -1,2 +1,2 @@
 # GatlingTests
-Messing about with Gatling, Spring and AWS
+Gatling tests against Spring project
